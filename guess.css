@@ -10,6 +10,7 @@
 
 body {
   margin: 0;
+  padding-bottom: 70px;
   background-color: #161616;
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
@@ -234,6 +235,13 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .guess-game {
+    flex-direction: column;
+    align-items: center;
+  }
+  .guess-game .game-area, .guess-game .key-colors {
+    width: 100%;
+  }
   .guess-game .game-area .inputs input {
     width: 45px;
     height: 45px;
@@ -251,28 +259,65 @@ footer {
 @media (max-width: 480px) {
   h1 {
     font-size: 24px;
-    margin: 0 0 30px;
+    margin: 0 0 20px;
+    padding: 15px;
+  }
+  .guess-game {
+    padding: 0 10px;
+    margin-top: 10px;
+    gap: 20px;
   }
   .guess-game .game-area .inputs input {
-    width: 35px;
-    height: 35px;
-    font-size: 24px;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
     margin: 0 2px;
+    border-width: 2px;
   }
   .guess-game .game-area .inputs > div span {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  .guess-game .game-area .control {
+    gap: 8px;
+  }
+  .guess-game .game-area .control button {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+  .guess-game .key-colors h2 {
     font-size: 20px;
-    margin-right: 8px;
+    margin-bottom: 15px;
   }
   .guess-game .key-colors .key-color {
-    padding: 10px;
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+  .guess-game .key-colors .key-color .key {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
   }
   .guess-game .key-colors .key-color .key-text {
-    font-size: 14px;
+    font-size: 13px;
+  }
+  .guess-game .key-colors .keyboard {
+    margin-top: 20px;
+    gap: 6px;
+    width: 100%;
+  }
+  .guess-game .key-colors .keyboard .row {
+    gap: 4px;
+    width: 100%;
   }
   .guess-game .key-colors .keyboard .row button {
-    min-width: 28px;
+    min-width: 24px;
     height: 40px;
     font-size: 14px;
     padding: 0;
+    border-width: 1px;
+    border-radius: 4px;
+    flex-grow: 1;
+    max-width: 34px;
   }
 }
